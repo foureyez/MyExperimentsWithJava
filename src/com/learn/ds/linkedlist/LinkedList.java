@@ -59,8 +59,8 @@ public class LinkedList {
 	private static void reverseLL() {
 		Node tmp;
 		Node prev = null, curr = head;
-		
-		while(curr.next != null){
+
+		while (curr.next != null) {
 			tmp = curr.next;
 			curr.next = prev;
 			prev = curr;
@@ -69,6 +69,7 @@ public class LinkedList {
 		curr.next = prev;
 		head = curr;
 		System.out.println("Linked List Reversed");
+		printList();
 	}
 
 	private static void swapNodes(int a, int b) {
@@ -102,10 +103,6 @@ public class LinkedList {
 		} else {
 			head = nodeA;
 		}
-
-		tmp = nodeA.next;
-		nodeA.next = nodeB.next;
-		nodeB.next = tmp;
 	}
 
 	private static void generateLL(int length) {
@@ -117,7 +114,7 @@ public class LinkedList {
 			tmp.next = node;
 			tmp = tmp.next;
 		}
-		
+
 		System.out.println("Linked List Generated");
 	}
 
