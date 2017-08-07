@@ -114,10 +114,8 @@ public class LinkedList {
 		Node node;
 		while (--length != 0) {
 			node = new Node((int) (Math.random() * Math.random() / Math.random() * 100));
-			while (tmp.next != null) {
-				tmp = tmp.next;
-			}
 			tmp.next = node;
+			tmp = tmp.next;
 		}
 		
 		System.out.println("Linked List Generated");
