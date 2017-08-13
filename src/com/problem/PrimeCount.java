@@ -11,11 +11,11 @@ public class PrimeCount {
 
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		int i = 0, k, output = -1;
+		int i = 0, threshold, output = -1;
 		Map<Integer, Integer> a = new TreeMap<>(Collections.reverseOrder());
 
-		int n = Integer.parseInt(br.readLine());
-		while (i < n) {
+		int num = Integer.parseInt(br.readLine());
+		while (i < num) {
 			Integer input = Integer.parseInt(br.readLine());
 			if (a.get(input) == null) {
 				a.put(input, 1);
@@ -25,11 +25,11 @@ public class PrimeCount {
 			i++;
 		}
 
-		k = Integer.parseInt(br.readLine());
+		threshold = Integer.parseInt(br.readLine());
 
 		for (int j : a.keySet()) {
 			int count = a.get(j);
-			if (count > k && checkPrime(count)) {
+			if (count > threshold && checkPrime(count)) {
 				output = j;
 				break;
 			}
