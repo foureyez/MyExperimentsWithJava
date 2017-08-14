@@ -4,6 +4,13 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+
+/**
+ * 
+ * @author arawat
+ * Finding the factorial of a number using memorization
+ *
+ */
 public class Factorial {
 	
 	static long mod = 1000000007;

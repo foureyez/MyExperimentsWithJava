@@ -9,7 +9,7 @@ import java.io.InputStreamReader;
  * @author abhir Counting the number of 1's in a number
  *
  */
-public class ProblemOne {
+public class CountOnes {
 
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

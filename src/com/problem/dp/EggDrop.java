@@ -4,6 +4,14 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+
+/**
+ * 
+ * @author arawat
+ * Given the number of floors and the number of eggs find the highest floor from which
+ * the egg can be dropped so that it does not break
+ *
+ */
 public class EggDrop {
 
 	public static void main(String args[]) throws NumberFormatException, IOException {

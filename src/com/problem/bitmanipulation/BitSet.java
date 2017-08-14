@@ -9,7 +9,7 @@ import java.io.InputStreamReader;
  * @author abhir To find if the ith bit is set or not(1 or 0)
  *
  */
-public class ProblemTwo {
+public class BitSet {
 
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

@@ -1,4 +1,4 @@
-package com.problem;
+package com.problem.misc;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -7,6 +7,13 @@ import java.util.Collections;
 import java.util.Map;
 import java.util.TreeMap;
 
+/**
+ * 
+ * @author arawat
+ * Given an array find the maximum number with prime number of 
+ * occurrences greater than a threshold integer
+ *
+ */
 public class PrimeCount {
 
 	public static void main(String[] args) throws NumberFormatException, IOException {

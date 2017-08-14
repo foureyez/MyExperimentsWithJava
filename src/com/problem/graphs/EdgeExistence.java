@@ -16,7 +16,7 @@ import java.lang.Exception;
  *
  */
 
-class ProblemOne {
+class EdgeExistence {
 	public static void main(String args[]) throws Exception {
 
 		String lineArr[];

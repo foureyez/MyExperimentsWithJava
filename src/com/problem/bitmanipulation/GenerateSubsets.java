@@ -10,7 +10,7 @@ import java.io.InputStreamReader;
  * To generate all the possible subsets for a given set
  *
  */
-public class ProblemThree {
+public class GenerateSubsets {
 
     public static void main(String[] args) throws NumberFormatException, IOException {
 	BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
