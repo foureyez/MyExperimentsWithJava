@@ -7,9 +7,8 @@ import java.io.InputStreamReader;
 public class BalanceWeights {
 
 	static int diff;
-	static int dp[];
 	
-	public static void main(String[] args) throws IOException {
+	public static void main(String args[]) throws IOException {
 		String input[];
 		int weights[];
 		
@@ -18,7 +17,6 @@ public class BalanceWeights {
 
 		n = Integer.parseInt(br.readLine());
 		weights = new int[n];
-		dp = new int[n];
 		input = br.readLine().split(" ");
 		x = Integer.parseInt(br.readLine());
 
