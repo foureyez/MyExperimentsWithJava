@@ -4,6 +4,14 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+/**
+ * 
+ * @author arawat
+ * Balance the weights left and right on the rod and see if they can be balanced within a margin 
+ * of error, can be perfectly balanced or not balanced at all.Given an array of weights if you put
+ * the weight on the left side its value becomes +1
+ *
+ */
 public class BalanceWeights {
 
 	static int diff;
