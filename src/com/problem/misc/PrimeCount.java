@@ -9,9 +9,9 @@ import java.util.TreeMap;
 
 /**
  * 
- * @author arawat
- * Given an array find the maximum number with prime number of 
- * occurrences greater than a threshold integer
+ * @author arawat 
+ * Given an array find the maximum number with prime number of
+ * occurrences greater than a threshold integer.
  *
  */
 public class PrimeCount {
@@ -41,7 +41,7 @@ public class PrimeCount {
 				break;
 			}
 		}
-		
+
 		System.out.println(output);
 
 	}

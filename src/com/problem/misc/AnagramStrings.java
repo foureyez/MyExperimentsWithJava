@@ -4,6 +4,12 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+/**
+ * 
+ * @author arawat
+ * Given two strings A and B find out of they are anagrams or not
+ *
+ */
 public class AnagramStrings {
 
 	public static void main(String[] args) throws IOException {

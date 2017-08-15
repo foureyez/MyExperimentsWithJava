@@ -4,11 +4,9 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-
 /**
  * 
  * @author arawat
- * 
  * To Find out the largest possible sum of the subset of the array
  *
  */
@@ -30,21 +28,21 @@ public class KadaneAlgorithm {
 			for (int i = 0; i < n; i++) {
 				a[i] = Integer.parseInt(input[i]);
 				sum += a[i];
-				
-				if(maxNegative < a[i]){
+
+				if (maxNegative < a[i]) {
 					maxNegative = a[i];
 				}
-				
-				if(sum > max){
+
+				if (sum > max) {
 					max = sum;
 				}
-				
-				if(sum < 0){
+
+				if (sum < 0) {
 					sum = 0;
 				}
 			}
-			
-			if(sum == 0)		
+
+			if (sum == 0)
 				System.out.println(maxNegative);
 			else
 				System.out.println(max);

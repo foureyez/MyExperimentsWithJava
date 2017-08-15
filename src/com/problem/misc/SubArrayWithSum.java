@@ -4,6 +4,13 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+/**
+ * 
+ * @author arawat
+ * Given an array and a sum find out the subarray of the
+ * given array which sums up to that number
+ *
+ */
 public class SubArrayWithSum {
 
 	public static void main(String args[]) throws NumberFormatException, IOException {
