@@ -6,14 +6,16 @@ import java.io.InputStreamReader;
 
 /**
  * 
- * @author arawat Given an array of zeroes and ones separate out the zeroes and
- *         ones from that array.
+ * @author arawat 
+ * Given an array of zeroes and ones separate out the zeroes and
+ * ones from that array.
  *
  */
 public class SortZeroesNOnes {
 	public static void main(String args[]) throws IOException {
 		String input[];
 		int i, left, right, n, temp, arr[];
+
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
 		input = br.readLine().split(" ");
