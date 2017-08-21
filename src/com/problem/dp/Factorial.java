@@ -28,7 +28,6 @@ public class Factorial {
 	}
 
 	private static long getFactorial(int n) {
-		int factorial = 1;
 		long cache[] = new long[n+1];
 		cache[0] = 1;
 		for (int i = 1; i <= n; i++) {

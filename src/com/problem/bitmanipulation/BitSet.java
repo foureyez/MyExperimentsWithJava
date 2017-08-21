@@ -20,8 +20,6 @@ public class BitSet {
 	}
 
 	private static boolean checkBit(int n, int i) {
-		boolean isSet = false;
-
 		if (n != 0 && ((n & (1 << i)) != 0))
 			return true;
 		return false;
