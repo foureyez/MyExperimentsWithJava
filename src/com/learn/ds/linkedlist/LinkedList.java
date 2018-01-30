@@ -19,7 +19,8 @@ public class LinkedList {
 		System.out.println("4. Swap two Nodes");
 		System.out.println("5. Print Linked List");
 		System.out.println("6. Reverse Linked List");
-		System.out.println("7. Exit");
+		System.out.println("7. Print Length");
+		System.out.println("8. Exit");
 		System.out.println("=======================================");
 		while (true) {
 			choice = Integer.parseInt(br.readLine());
@@ -47,6 +48,10 @@ public class LinkedList {
 				reverseLL();
 				break;
 			case 7:
+				int length = getLength(head);
+				System.out.println("Length of LL : " + length);
+				break;
+			case 8:
 				System.exit(1);
 				break;
 			default:
@@ -54,6 +59,22 @@ public class LinkedList {
 			}
 		}
 
+	}
+
+	private static int getLength(Node head2) {
+		int length = 0;
+		Node tmp = head;
+
+		if (tmp == null) {
+			return length;
+		}
+
+		while (tmp != null) {
+			length++;
+			tmp = tmp.next;
+		}
+
+		return length;
 	}
 
 	private static void reverseLL() {
@@ -110,7 +131,7 @@ public class LinkedList {
 		Node tmp = head;
 		Node node;
 		while (--length != 0) {
-			node = new Node((int) (Math.random() * Math.random() / Math.random() * 100));
+			node = new Node((int) (Math.random() * 100));
 			tmp.next = node;
 			tmp = tmp.next;
 		}

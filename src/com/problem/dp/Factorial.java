@@ -33,7 +33,6 @@ public class Factorial {
 		for (int i = 1; i <= n; i++) {
 			cache[i] = (i * cache[i-1])%mod; 
 		}
-		
 		return cache[n];
 	}
 }

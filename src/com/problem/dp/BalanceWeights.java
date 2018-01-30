@@ -6,20 +6,20 @@ import java.io.InputStreamReader;
 
 /**
  * 
- * @author arawat
- * Balance the weights left and right on the rod and see if they can be balanced within a margin 
- * of error, can be perfectly balanced or not balanced at all.Given an array of weights if you put
- * the weight on the left side its value becomes +1
+ * Balance the weights left and right on the rod and see if they can be balanced
+ * within a margin of error, can be perfectly balanced or not balanced at
+ * all.Given an array of weights if you put the weight on the left side its
+ * value becomes +1
  *
  */
 public class BalanceWeights {
 
 	static int diff;
-	
+
 	public static void main(String args[]) throws IOException {
 		String input[];
 		int weights[];
-		
+
 		int n, x, sum = 0;
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
@@ -47,7 +47,7 @@ public class BalanceWeights {
 	static int isBalance(int[] weights, int n, int left, int right, int x) {
 		int leftTree;
 		int rightTree;
-		
+
 		if (Math.abs(left - right) == 0) {
 			return 1;
 		}
@@ -63,7 +63,7 @@ public class BalanceWeights {
 
 		leftTree = isBalance(weights, n - 1, left + weights[n - 1] + 1, right - weights[n - 1], x);
 		rightTree = isBalance(weights, n - 1, left, right, x);
-		
+
 		if (leftTree == 1 || rightTree == 1) {
 			return 1;
 		} else if (leftTree == -1 || rightTree == -1) {
