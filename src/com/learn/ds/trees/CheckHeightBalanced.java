@@ -1,5 +1,8 @@
 package com.learn.ds.trees;
 
+import com.datastructures.tree.BinaryTree;
+import com.datastructures.tree.Node;
+
 public class CheckHeightBalanced {
 
 	public static void main(String args[]) {

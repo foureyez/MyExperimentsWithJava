@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-import com.problem.array.ArrayUtil;
+import com.util.ArrayUtil;
 
 public class WeightDistribution {
 
