@@ -6,7 +6,11 @@ import java.io.InputStreamReader;
 
 /**
  * 
- * @author abhir To find if the ith bit is set or not(1 or 0)
+ * To find if the ith bit is set or not(1 or 0).<br>
+ * 1) Left shift given number 1 by k-1 to create a number that has only set bit
+ * as k-th bit. temp = 1 << (k-1) <br>
+ * 2) If bitwise AND of n and temp is non-zero, then result is SET else result
+ * is NOT SET.
  *
  */
 public class BitSet {

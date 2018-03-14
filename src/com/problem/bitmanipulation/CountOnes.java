@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 
 /**
  * 
- * @author abhir Counting the number of 1's in a number
+ * Counting the number of 1's in a number.
  *
  */
 public class CountOnes {
