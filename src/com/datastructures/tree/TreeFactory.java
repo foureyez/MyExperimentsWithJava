@@ -1,4 +1,4 @@
-package com.learn.ds.trees;
+package com.datastructures.tree;
 
 public class TreeFactory {
 

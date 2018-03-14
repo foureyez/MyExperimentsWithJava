@@ -2,13 +2,11 @@ package com.problem.trees;
 
 import java.util.LinkedList;
 import java.util.Queue;
-import java.util.Stack;
 
-import com.learn.ds.trees.Node;
-import com.learn.ds.trees.SimpleTree;
-import com.learn.ds.trees.Tree;
-import com.learn.ds.trees.TreeFactory;
-import com.learn.ds.trees.TreeType;
+import com.datastructures.tree.Node;
+import com.datastructures.tree.SimpleTree;
+import com.datastructures.tree.TreeFactory;
+import com.datastructures.tree.TreeType;
 
 /**
  * Given a Binary tree, the task is to print all its levels in sorted order.
@@ -27,18 +25,22 @@ public class LevelOrderSorting {
 		Node node = tree.getRoot();
 		queue.add(node);
 
-		while (!queue.isEmpty()) {
-			node = queue.remove();
-			System.out.print(node.data + "->");
+		int nodeCount = queue.size();
 
-			if (node.left != null) {
-				queue.add(node.left);
-			}
-			
-			if (node.right != null) {
-				queue.add(node.right);
-			}
+		while (true) {
+			while (nodeCount > 0) {
+				node = queue.peek();
 
+				if (node.left != null) {
+					queue.add(node.left);
+				}
+
+				if (node.right != null) {
+					queue.add(node.right);
+				}
+
+			}
 		}
+
 	}
 }

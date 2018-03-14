@@ -1,11 +1,12 @@
 package com.problem.array;
 
 import com.learn.ds.arrays.MergeSort;
+import com.util.ArrayUtil;
 
 /**
  * 
- * @author arawat Given an unsorted array, find the minimum difference between
- *         any pair in given array.
+ * Given an unsorted array, find the minimum difference between any pair in
+ * given array.
  *
  */
 public class MinDiff {
@@ -21,6 +22,7 @@ public class MinDiff {
 
 	private static int findMinDiff(int[] arr) {
 		int diff = MAX_VALUE, currDiff;
+		
 		// Sort the given array
 		MergeSort.mergeSort(arr, 0, arr.length - 1);
 

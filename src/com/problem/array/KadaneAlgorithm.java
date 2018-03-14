@@ -6,46 +6,52 @@ import java.io.InputStreamReader;
 
 /**
  * 
- * @author arawat
- * To Find out the largest possible sum of the subset of the array
+ * Find the sum of contiguous subarray within a one-dimensional array of numbers
+ * which has the largest sum.
  *
  */
 public class KadaneAlgorithm {
 
 	public static void main(String[] args) throws NumberFormatException, IOException {
+
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		int n, sum, max, maxNegative;
+		int n, currMax, overallMax, maxElement;
 		String[] input;
+
 		int T = Integer.parseInt(br.readLine());
 
 		while (T-- != 0) {
-			sum = max = 0;
 			n = Integer.parseInt(br.readLine());
 			input = br.readLine().split(" ");
 
 			int a[] = new int[n];
-			maxNegative = Integer.parseInt(input[0]);
+			maxElement = Integer.parseInt(input[0]);
+			currMax = overallMax = 0;
+
 			for (int i = 0; i < n; i++) {
+
 				a[i] = Integer.parseInt(input[i]);
-				sum += a[i];
+				currMax += a[i];
 
-				if (maxNegative < a[i]) {
-					maxNegative = a[i];
+				if (a[i] > maxElement) {
+					maxElement = a[i];
 				}
 
-				if (sum > max) {
-					max = sum;
-				}
-
-				if (sum < 0) {
-					sum = 0;
+				if (currMax < 0) {
+					currMax = 0;
+				} else if (overallMax < currMax) {
+					overallMax = currMax;
 				}
 			}
 
-			if (sum == 0)
-				System.out.println(maxNegative);
-			else
-				System.out.println(max);
+			/**
+			 * If all the elements in the array are negative
+			 */
+			if (currMax == 0) {
+				System.out.println(maxElement);
+			} else {
+				System.out.println(overallMax);
+			}
 
 		}
 	}

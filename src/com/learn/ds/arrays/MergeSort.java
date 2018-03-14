@@ -1,6 +1,6 @@
 package com.learn.ds.arrays;
 
-import com.problem.array.ArrayUtil;
+import com.util.ArrayUtil;
 
 public class MergeSort {
 
