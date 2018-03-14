@@ -4,6 +4,9 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+import com.datastructures.linkedlist.LinkedList;
+import com.datastructures.linkedlist.Node;
+
 public class FindMiddle {
 	public static void main(String[] args) throws IOException {
 
@@ -12,35 +15,21 @@ public class FindMiddle {
 		String[] input = br.readLine().split(" ");
 
 		for (String s : input) {
-			
+			linkedList.addNode(Integer.parseInt(s));
 		}
 
 		findMiddle(linkedList);
 	}
 
 	private static void findMiddle(LinkedList linkedList) {
-	}
-}
+		Node slowPointer = linkedList.getHead();
+		Node fastPointer = linkedList.getHead();
 
-class LinkedList {
-	Node head;
-
-	public void addNode(Node node) {
-		if (head == null) {
-			head = node;
-		} else {
-
+		while (fastPointer != null) {
+			fastPointer = fastPointer.next.next;
+			slowPointer = slowPointer.next;
 		}
-	}
-}
 
-class Node {
-
-	int data;
-	Node next;
-
-	public Node(int data, Node next) {
-		this.data = data;
-		this.next = next;
+		System.out.println("Middle of linked List: " + slowPointer.data);
 	}
 }

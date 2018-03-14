@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 
 import com.datastructures.linkedlist.LinkedList;
 
-public class LinkedListDemo {
+public class LinkedListClient {
 	public static void main(String[] args) throws NumberFormatException, IOException {
 
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
