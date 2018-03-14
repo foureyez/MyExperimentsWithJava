@@ -6,8 +6,7 @@ import java.io.InputStreamReader;
 
 /**
  * 
- * @author arawat
- * Given two strings A and B find out of they are anagrams or not
+ * Given two strings A and B find out of they are anagrams or not.
  *
  */
 public class AnagramStrings {
