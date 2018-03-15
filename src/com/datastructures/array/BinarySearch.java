@@ -1,4 +1,4 @@
-package com.learn.ds.arrays;
+package com.datastructures.array;
 
 import java.io.BufferedReader;
 import java.io.IOException;

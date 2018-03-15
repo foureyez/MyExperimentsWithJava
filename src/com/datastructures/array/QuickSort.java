@@ -1,4 +1,4 @@
-package com.learn.ds.arrays;
+package com.datastructures.array;
 
 import com.util.ArrayUtil;
 

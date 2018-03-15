@@ -1,10 +1,8 @@
-package com.learn.ds.linkedlist;
+package com.datastructures.linkedlist;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-
-import com.datastructures.linkedlist.LinkedList;
 
 public class LinkedListClient {
 	public static void main(String[] args) throws NumberFormatException, IOException {

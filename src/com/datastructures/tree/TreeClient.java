@@ -1,12 +1,8 @@
-package com.learn.ds.trees;
+package com.datastructures.tree;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-
-import com.datastructures.tree.SimpleTree;
-import com.datastructures.tree.TreeFactory;
-import com.datastructures.tree.TreeType;
 
 /**
  * This is the main class in which all the operations performed on trees can be
