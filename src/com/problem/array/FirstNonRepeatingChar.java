@@ -8,7 +8,7 @@ import java.util.List;
 
 /**
  * 
- * @author arawat Find out the first non repeating character in a given string.
+ * Find out the first non repeating character in a given string.
  *
  */
 public class FirstNonRepeatingChar {

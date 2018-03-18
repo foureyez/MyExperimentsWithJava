@@ -22,8 +22,7 @@ public class MinDiff {
 
 	private static int findMinDiff(int[] arr) {
 		int diff = MAX_VALUE, currDiff;
-		
-		// Sort the given array
+
 		MergeSort.mergeSort(arr, 0, arr.length - 1);
 
 		for (int i = 1; i < arr.length; i++) {

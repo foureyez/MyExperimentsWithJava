@@ -17,6 +17,7 @@ public class KadaneAlgorithm {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		int n, currMax, overallMax, maxElement;
 		String[] input;
+		int start = 0, end = 0;
 
 		int T = Integer.parseInt(br.readLine());
 
@@ -35,12 +36,16 @@ public class KadaneAlgorithm {
 
 				if (a[i] > maxElement) {
 					maxElement = a[i];
+					end = i;
 				}
 
 				if (currMax < 0) {
+					start = i;
+					end = i;
 					currMax = 0;
 				} else if (overallMax < currMax) {
 					overallMax = currMax;
+					end = i;
 				}
 			}
 
@@ -48,9 +53,9 @@ public class KadaneAlgorithm {
 			 * If all the elements in the array are negative
 			 */
 			if (currMax == 0) {
-				System.out.println(maxElement);
+				System.out.println(maxElement + " : " + start + " : " + end);
 			} else {
-				System.out.println(overallMax);
+				System.out.println(overallMax + " : " + start + " : " + end);
 			}
 
 		}

@@ -1,8 +1,8 @@
 package com.problem.array;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
+
+import com.util.InputReader;
 
 /**
  * Given two sorted arrays of size m and n respectively, find the element that
@@ -11,25 +11,23 @@ import java.io.InputStreamReader;
  */
 public class KTHElement {
 	public static void main(String args[]) throws NumberFormatException, IOException {
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-		int t = Integer.parseInt(br.readLine());
-		
-		while(t-- > 0) {
-			int[] inputArgs = new int[3];
-			readAndParseArray(br, inputArgs);
-			
+		InputReader inputReader = new InputReader();
+		int t = inputReader.getInt();
+
+		while (t-- > 0) {
+			int[] inputArgs = inputReader.getIntArray();
+
 			int[] a1 = new int[inputArgs[0]];
 			int[] a2 = new int[inputArgs[1]];
 
-			readAndParseArray(br, a1);
-			readAndParseArray(br, a2);
+			a1 = inputReader.getIntArray();
+			a2 = inputReader.getIntArray();
 
 			int num = findPosition(a1, a2, inputArgs[2]);
 
 			System.out.println(num);
 		}
-	
 
 	}
 
@@ -38,7 +36,7 @@ public class KTHElement {
 		int n = 0;
 		int[] merged = new int[1000];
 
-		while (i<a1.length && j<a2.length) {
+		while (i < a1.length && j < a2.length) {
 			if (a1[i] < a2[j]) {
 				merged[n] = a1[i];
 				i++;
@@ -50,13 +48,5 @@ public class KTHElement {
 		}
 
 		return merged[k - 1];
-	}
-
-	private static void readAndParseArray(BufferedReader br, int[] a) throws IOException {
-		String[] input = br.readLine().split(" ");
-
-		for (int i = 0; i < a.length; i++) {
-			a[i] = Integer.parseInt(input[i]);
-		}
 	}
 }
