@@ -8,4 +8,15 @@ public class ArrayUtil {
 		}
 		System.out.println();
 	}
+
+	public static int[][] generate2DArray(int m, int n) {
+		int a[][] = new int[m][n];
+
+		for (int i = 0; i < m; i++) {
+			for (int j = 0; j < n; j++) {
+				a[i][j] = (int) Math.random() * 10;
+			}
+		}
+		return a;
+	}
 }

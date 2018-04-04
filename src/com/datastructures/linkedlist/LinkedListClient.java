@@ -8,7 +8,7 @@ public class LinkedListClient {
 	public static void main(String[] args) throws NumberFormatException, IOException {
 
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		LinkedList linkedList = new LinkedList();
+		LinkedList linkedList = new LinkedListImpl();
 		int data, choice, a, b;
 		System.out.println("============LINKED LIST================");
 		System.out.println("1. Generate a Linked List");
@@ -23,7 +23,7 @@ public class LinkedListClient {
 			choice = Integer.parseInt(br.readLine());
 			switch (choice) {
 			case 1:
-				linkedList.generateLL(10);
+				linkedList.generateLinkedList(10);
 				break;
 			case 2:
 				data = Integer.parseInt(br.readLine());
@@ -36,13 +36,13 @@ public class LinkedListClient {
 			case 4:
 				a = Integer.parseInt(br.readLine());
 				b = Integer.parseInt(br.readLine());
-				linkedList.swapNodes(a, b);
+				linkedList.swapNodesReference(a, b);
 				break;
 			case 5:
 				linkedList.printList();
 				break;
 			case 6:
-				linkedList.reverseLL();
+				linkedList.reverseLinkedList();
 				break;
 			case 7:
 				System.exit(1);

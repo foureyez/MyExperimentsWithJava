@@ -41,7 +41,7 @@ public class GenerateAllStrings {
 	private static void generateAllPossibleString(int n) {
 		a = new int[n];
 
-		for (int i = 0; i < 1 << n; i++) {
+		for (int i = 0; i < (1 << n); i++) {
 			for (int j = 0; j < n; j++) {
 				if ((i & (1 << j)) == 0) {
 					a[j] = 0;

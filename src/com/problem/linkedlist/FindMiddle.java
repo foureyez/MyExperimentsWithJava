@@ -4,14 +4,14 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-import com.datastructures.linkedlist.LinkedList;
+import com.datastructures.linkedlist.LinkedListImpl;
 import com.datastructures.linkedlist.Node;
 
 public class FindMiddle {
 	public static void main(String[] args) throws IOException {
 
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		LinkedList linkedList = new LinkedList();
+		LinkedListImpl linkedList = new LinkedListImpl();
 		String[] input = br.readLine().split(" ");
 
 		for (String s : input) {
@@ -21,11 +21,11 @@ public class FindMiddle {
 		findMiddle(linkedList);
 	}
 
-	private static void findMiddle(LinkedList linkedList) {
+	private static void findMiddle(LinkedListImpl linkedList) {
 		Node slowPointer = linkedList.getHead();
 		Node fastPointer = linkedList.getHead();
 
-		while (fastPointer != null) {
+		while (fastPointer != null && fastPointer.next != null) {
 			fastPointer = fastPointer.next.next;
 			slowPointer = slowPointer.next;
 		}
