@@ -1,4 +1,4 @@
-package com.datastructures.tree;
+package com.algorithm.tree;
 
 public class Node {
 	public int data;

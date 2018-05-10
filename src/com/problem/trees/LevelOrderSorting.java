@@ -3,10 +3,10 @@ package com.problem.trees;
 import java.util.LinkedList;
 import java.util.Queue;
 
-import com.datastructures.tree.Node;
-import com.datastructures.tree.SimpleTree;
-import com.datastructures.tree.TreeFactory;
-import com.datastructures.tree.TreeType;
+import com.algorithm.tree.Node;
+import com.algorithm.tree.SimpleTree;
+import com.algorithm.tree.TreeFactory;
+import com.algorithm.tree.TreeType;
 
 /**
  * Given a Binary tree, the task is to print all its levels in sorted order.

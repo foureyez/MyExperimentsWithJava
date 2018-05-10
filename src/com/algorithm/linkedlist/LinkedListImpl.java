@@ -1,4 +1,4 @@
-package com.datastructures.linkedlist;
+package com.algorithm.linkedlist;
 
 public class LinkedListImpl implements LinkedList {
 

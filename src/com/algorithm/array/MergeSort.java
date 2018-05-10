@@ -1,4 +1,4 @@
-package com.datastructures.array;
+package com.algorithm.array;
 
 import com.util.ArrayUtil;
 

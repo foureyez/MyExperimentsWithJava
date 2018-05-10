@@ -4,8 +4,8 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-import com.datastructures.linkedlist.LinkedListImpl;
-import com.datastructures.linkedlist.Node;
+import com.algorithm.linkedlist.LinkedListImpl;
+import com.algorithm.linkedlist.Node;
 
 public class FindMiddle {
 	public static void main(String[] args) throws IOException {

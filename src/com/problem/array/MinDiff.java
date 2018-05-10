@@ -1,6 +1,6 @@
 package com.problem.array;
 
-import com.datastructures.array.MergeSort;
+import com.algorithm.array.MergeSort;
 import com.util.ArrayUtil;
 
 /**
