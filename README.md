@@ -3,7 +3,7 @@ Collection of different java problems, techniques and tutorials
 
 ## Overview
 * The project mainly divided into three main packages
-  * datastructures
+  * algorithms
   * problems
   * utils
 
