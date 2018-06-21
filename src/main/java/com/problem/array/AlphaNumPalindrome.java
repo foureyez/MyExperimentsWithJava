@@ -38,24 +38,24 @@ public class AlphaNumPalindrome {
         int i = 0, j = str.length - 1;
 
         while (i <= j) {
-            if (isAlphaNum(str[i]) && isAlphaNum(str[j])) {
 
+            boolean isAlphai = isAlphaNum(str[i]);
+            boolean isAlphaj = isAlphaNum(str[j]);
+            
+            if (isAlphai && isAlphaj) {
                 if (Character.toLowerCase(str[i]) != Character.toLowerCase(str[j])) {
                     return false;
                 }
-            }
-
-            if (!isAlphaNum(str[i]) || !isAlphaNum(str[j])) {
-                if (!isAlphaNum(str[i])) {
+                i++;
+                j--;
+            } else {
+                if (!isAlphai) {
                     i++;
                 }
 
-                if (!isAlphaNum(str[j])) {
+                if (!isAlphaj) {
                     j--;
                 }
-            } else {
-                i++;
-                j--;
             }
         }
         return true;
