@@ -1,6 +1,11 @@
 # MyExperimentsWithJava
 Collection of different java problems, techniques and tutorials
 
+## SETUP
+1. Download/Clone the repositoy
+2. Open Eclipse -> File -> Import -> Import Gradle Project
+3. Next..next..next..finish!
+
 ## Overview
 * The project mainly divided into three main packages
   * algorithms
