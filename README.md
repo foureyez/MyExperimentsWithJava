@@ -17,17 +17,16 @@ Collection of different java problems, techniques and tutorials
   * trees
   
   *or* sometimes the functionality it provides
- 
-  *search
-  *sort
+  * search
+  * sort
 
 * The *problems* package simiarly contains competitive programming problems divided by the datastructure that it uses e.g.
   * linkedlist
   * trees
   
-  *or* sometimes the type of the problem 
-  *dynamic programming(dp)
-  *greedy approach
+  *or* sometimes the type of the problem
+  * dynamic programming(dp)
+  * greedy approach
 
 * The *utils* package contains all the utility classes like InputReader, FastInputReader..etc.. that are used in the project.
 
