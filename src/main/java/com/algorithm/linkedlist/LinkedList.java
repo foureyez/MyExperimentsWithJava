@@ -5,7 +5,7 @@ public class LinkedList {
     private Node head;
     private Node currNode;
     private int length;
-
+    
     public Node getHead() {
         return head;
     }
@@ -46,33 +46,8 @@ public class LinkedList {
         return length;
     }
 
-    public void printList() {
-        Node tmp = head;
-        if (head != null) {
-            while (tmp != null) {
-                System.out.print(tmp.data + " -> ");
-                tmp = tmp.next;
-            }
-            System.out.println();
-        } else {
-            System.out.println("No Data");
-        }
-    }
-
     public void reverseLinkedList() {
-        Node tmp;
-        Node prev = null, curr = head;
 
-        while (curr.next != null) {
-            tmp = curr.next;
-            curr.next = prev;
-            prev = curr;
-            curr = tmp;
-        }
-        curr.next = prev;
-        head = curr;
-        System.out.println("Linked List Reversed");
-        printList();
     }
 
     public void swapNodesData(int a, int b) {

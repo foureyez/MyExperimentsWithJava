@@ -1,48 +1,34 @@
 package com.algorithm.sort;
 
-import com.util.ArrayUtil;
-
 public class QuickSort {
 
-	public static void main(String[] args) {
-		int arr[] = { 12, 11, 13, 5, 6, 7 };
+    public void sort(int[] arr, int p, int r) {
+        if (p < r) {
+            int q = partition(arr, p, r);
 
-		System.out.println("Given Array");
-		ArrayUtil.printArray(arr);
+            sort(arr, p, q - 1);
+            sort(arr, q + 1, r);
+        }
+    }
 
-		quickSort(arr, 0, arr.length - 1);
+    private int partition(int[] arr, int low, int high) {
+        int pivot = arr[high];
+        int i = low - 1, j, temp;
 
-		System.out.println("\nSorted array");
-		ArrayUtil.printArray(arr);
-	}
+        for (j = low; j < high; j++) {
+            if (arr[j] < pivot) {
+                i++;
+                temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
+        }
 
-	public static void quickSort(int[] arr, int p, int r) {
-		if (p < r) {
-			int q = partition(arr, p, r);
+        temp = arr[high];
+        arr[high] = arr[i + 1];
+        arr[i + 1] = temp;
 
-			quickSort(arr, p, q - 1);
-			quickSort(arr, q + 1, r);
-		}
-	}
-
-	private static int partition(int[] arr, int low, int high) {
-		int pivot = arr[high];
-		int i = low - 1, j, temp;
-
-		for (j = low; j < high; j++) {
-			if (arr[j] < pivot) {
-				i++;
-				temp = arr[i];
-				arr[i] = arr[j];
-				arr[j] = temp;
-			}
-		}
-
-		temp = arr[high];
-		arr[high] = arr[i + 1];
-		arr[i + 1] = temp;
-
-		return i + 1;
-	}
+        return i + 1;
+    }
 
 }
