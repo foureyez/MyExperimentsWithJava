@@ -1,6 +1,6 @@
-| Sorting                                                                                                                             	| Docs                                                                                     	|
-|-------------------------------------------------------------------------------------------------------------------------------------	|------------------------------------------------------------------------------------------	|
-| [Bubble Sort](https://github.com/foureyez/MyExperimentsWithJava/blob/master/src/main/java/com/algorithm/sort/BubbleSort.java)       	| [ link ](https://foureyez.github.io/MyExperimentsWithJava/algo/bubble-sort)    	|
-| [Selection Sort](https://github.com/foureyez/MyExperimentsWithJava/blob/master/src/main/java/com/algorithm/sort/SelectionSort.java) 	| [ link ](https://foureyez.github.io/MyExperimentsWithJava/algo/selection-sort) 	|
-| [Merge Sort](https://github.com/foureyez/MyExperimentsWithJava/blob/master/src/main/java/com/algorithm/sort/MergeSort.java)         	| [ link ](https://foureyez.github.io/MyExperimentsWithJava/algo/merge-sort)     	|
-| [Quick Sort](https://github.com/foureyez/MyExperimentsWithJava/blob/master/src/main/java/com/algorithm/sort/QuickSort.java)         	| [ link ](https://foureyez.github.io/MyExperimentsWithJava/algo/quick-sort)     	|
+Sorting	| Source Code 
+--- | ---
+[Bubble Sort](https://foureyez.github.io/MyExperimentsWithJava/algo/bubble-sort) | [ link ](https://github.com/foureyez/MyExperimentsWithJava/blob/master/src/main/java/com/algorithm/sort/BubbleSort.java)
+[Selection Sort](https://foureyez.github.io/MyExperimentsWithJava/algo/selection-sort) | [ link ](https://github.com/foureyez/MyExperimentsWithJava/blob/master/src/main/java/com/algorithm/sort/SelectionSort.java)
+[Merge Sort](https://foureyez.github.io/MyExperimentsWithJava/algo/merge-sort) | [ link ](https://github.com/foureyez/MyExperimentsWithJava/blob/master/src/main/java/com/algorithm/sort/MergeSort.java)
+[Quick Sort](https://foureyez.github.io/MyExperimentsWithJava/algo/quick-sort) | [ link ](https://github.com/foureyez/MyExperimentsWithJava/blob/master/src/main/java/com/algorithm/sort/QuickSort.java)

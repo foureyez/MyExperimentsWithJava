@@ -9,6 +9,7 @@ Time Complexity : O(nLogn)
 This is an example diagram for merge sort execution sequence taken from [GeeksForGeeks](https://www.geeksforgeeks.org)
 ![logo](https://www.geeksforgeeks.org/wp-content/uploads/Merge-Sort-Tutorial.png "Logo Title Text 2")
 
-As you can guess, the main logic of merge sort is in the merge() method.
+As you can see, the main logic of merge sort is in the merge() method.
 
-[Source Code](https://github.com/foureyez/MyExperimentsWithJava/blob/master/src/main/java/com/algorithm/sort/MergeSort.java)
+[Source Code](https://github.com/foureyez/MyExperimentsWithJava/blob/master/src/main/java/com/algorithm/sort/MergeSort.java) 
+[Go Back](https://foureyez.github.io/MyExperimentsWithJava/overview)

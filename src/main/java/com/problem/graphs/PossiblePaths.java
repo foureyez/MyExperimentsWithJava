@@ -1,8 +1,5 @@
 package com.problem.graphs;
 
-import java.util.Iterator;
-import java.util.Stack;
-
 import com.algorithm.graph.Graph;
 
 /**
@@ -11,42 +8,40 @@ import com.algorithm.graph.Graph;
  * @author arawat
  */
 public class PossiblePaths {
-    public static void main(String[] args) {
-        Graph graph = new Graph(6);
+	public static void main(String[] args) {
+		Graph G = new Graph(6);
 
-        graph.addEdge(0, 1);
-        graph.addEdge(0, 3);
-        graph.addEdge(2, 0);
-        graph.addEdge(2, 1);
-        graph.addEdge(1, 3);
+		G.addEdge(0, 1);
+		G.addEdge(0, 3);
+		G.addEdge(2, 0);
+		G.addEdge(2, 1);
+		G.addEdge(1, 3);
 
-        int s = 2, d = 3;
-        System.out.println(countPaths(graph, s, d));
-    }
+		int s = 2, d = 3;
+		boolean[] visited = new boolean[G.V()];
+		System.out.println(countPaths(G, visited, s, d));
+	}
 
-    private static int countPaths(Graph graph, int s, int d) {
-        int count = 0;
-        Stack<Integer> stack = new Stack<>();
-        stack.push(s);
+	private static int countPaths(Graph G, boolean[] visited, int s, int d) {
+		return countPathsRecursion(G, visited, s, d, 0);
+	}
 
-        while (!stack.isEmpty()) {
-            int curr = stack.pop();
-            if (curr == d) {
-                count++;
-            }
+	private static int countPathsRecursion(Graph G, boolean[] visited, int v, int d, int count) {
 
-            Iterator<Integer> it = graph.getAdj()[curr].iterator();
-            while (it.hasNext()) {
-                int el = it.next();
+		visited[v] = true;
 
-                if (!graph.isVisited()[el]) {
-                    stack.push(el);
-                    graph.setVisited(el, true);
-                }
-            }
-            graph.resetVisited();
-        }
+		if (v == d) {
+			count++;
+		} else {
+			for (int i : G.adj(v)) {
+				if (!visited[i]) {
+					count = countPathsRecursion(G, visited, i, d, count);
+				}
+			}
+		}
 
-        return count;
-    }
+		visited[v] = false;
+
+		return count;
+	}
 }

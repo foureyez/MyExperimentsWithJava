@@ -12,7 +12,7 @@ Collection of different java problems, techniques and tutorials
   * problems
   * utils
 
-* The *algorithm* package contains popular algorithms implementation commonly divided by the datastructure that it uses e.g.
+* The **algorithm** package contains popular algorithms implementation commonly divided by the datastructure that it uses e.g.
   * linkedlist
   * trees
   
@@ -20,7 +20,7 @@ Collection of different java problems, techniques and tutorials
   * search
   * sort
 
-* The *problems* package simiarly contains competitive programming problems divided by the datastructure that it uses e.g.
+* The **problems** package simiarly contains competitive programming problems divided by the datastructure that it uses e.g.
   * linkedlist
   * trees
   
@@ -28,8 +28,9 @@ Collection of different java problems, techniques and tutorials
   * dynamic programming(dp)
   * greedy approach
 
-* The *utils* package contains all the utility classes like InputReader, FastInputReader..etc.. that are used in the project.
+* The **utils** package contains all the utility classes like InputReader, FastInputReader..etc.. that are used in the project.
 
+* There is also a **docs** folder in the root directory where info about each algo/problem will be added.
 
 
 

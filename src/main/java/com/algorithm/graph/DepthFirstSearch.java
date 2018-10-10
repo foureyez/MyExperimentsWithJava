@@ -1,36 +1,30 @@
 package com.algorithm.graph;
 
-import java.util.List;
-import java.util.Stack;
-
 public class DepthFirstSearch {
 
-    private boolean[] isVisited;
+	private boolean[] isVisited;
+	private int[] edgeTo; // If v is connected to the source s.
+	private int s; // Source (Starting point for DFS.)
 
-    public DepthFirstSearch(int V) {
-        isVisited = new boolean[V];
-    }
+	public DepthFirstSearch(Graph G, int s) {
+		isVisited = new boolean[G.V()];
+		edgeTo = new int[G.V()];
+		dfs(G, s);
+	}
 
-    public int search(List<Integer>[] adj, int s) {
-        Stack<Integer> stack = new Stack<>();
-        stack.push(s);
+	// Generate edgeTo data with respect to source passed using DFS.
+	public void dfs(Graph G, int v) {
+		isVisited[v] = true;
 
-        while (!stack.isEmpty()) {
+		for (Integer i : G.adj(v)) {
+			if (!isVisited[i]) {
+				dfs(G, i);
+				edgeTo[i] = v;
+			}
+		}
+	}
 
-            int curr = stack.pop();
-
-            if (isVisited[curr]) {
-                continue;
-            }
-
-            isVisited[curr] = true;
-
-            for (Integer a : adj[curr]) {
-                if (!isVisited[a]) {
-                    stack.push(a);
-                }
-            }
-        }
-        return 0;
-    }
+	public boolean hasPath(int v) {
+		return isVisited[v];
+	}
 }
