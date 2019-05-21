@@ -5,7 +5,7 @@ public class LinkedList {
     private Node head;
     private Node currNode;
     private int length;
-    
+
     public Node getHead() {
         return head;
     }

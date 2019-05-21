@@ -31,7 +31,7 @@ public interface Tree {
      * Postorder traversal of tree (Left -> Right-> Root) ITERATIVE
      */
     public void postorderTraversal();
-    
+
     /**
      * Levelorder traversal of tree (Left -> Right-> Root) ITERATIVE
      */
@@ -56,5 +56,9 @@ public interface Tree {
      * @return the height of the tree. ITERATIVE
      */
     public int getHeight();
+
+    public Node getRoot();
+
+    public void setRoot(Node root);
 
 }

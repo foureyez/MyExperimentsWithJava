@@ -4,51 +4,40 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-
 /**
- * 
  * @author arawat
- * Given the number of floors and the number of eggs find the highest floor from which
- * the egg can be dropped so that it does not break
- *
+ *         Given the number of floors and the number of eggs find the highest floor from which
+ *         the egg can be dropped so that it does not break
  */
 public class EggDrop {
 
-	public static void main(String args[]) throws NumberFormatException, IOException {
-		int floors, eggs;
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    public static void main(String args[]) throws NumberFormatException, IOException {
+        int floors, eggs;
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-		floors = Integer.parseInt(br.readLine());
-		eggs = Integer.parseInt(br.readLine());
+        floors = Integer.parseInt(br.readLine());
+        eggs = Integer.parseInt(br.readLine());
 
-		System.out.println(optimalDrops(eggs, floors));
-	}
+        EggDrop ed = new EggDrop();
+        System.out.println(ed.getHighestFloorRecursive(floors, eggs));
+    }
 
-	public static int optimalDrops(int eggs, int floors) {
-		int mat[][] = new int[eggs + 1][floors + 1];
+    private int getHighestFloorRecursive(int floors, int eggs) {
 
-		for (int i = 0; i < floors; i++) {
-			mat[1][i] = i;
-		}
+        if (floors == 1 || floors == 0) {
+            return floors;
+        }
 
-		for (int i = 0; i < floors; i++) {
-			mat[0][i] = 0;
-		}
-		
-		
-		for (int i = 0; i < eggs; i++) {
-			mat[i][0] = 0;
-		}
+        if (eggs == 1) {
+            return floors;
+        }
 
-		for (int i = 2; i < eggs; i++) {
-			for (int j = 1; j < floors; j++) {
-				
-				for (int x = 1; x < j; x++) {
-					
-				}
-			}
-		}
-		return 0;
-	}
+        int min = Integer.MAX_VALUE;
+        for (int i = 1; i <= floors; i++) {
+            min = Math.min(min, Math.max(getHighestFloorRecursive(i - 1, eggs - 1), getHighestFloorRecursive(floors - i, eggs)));
+        }
+
+        return min + 1;
+    }
 
 }

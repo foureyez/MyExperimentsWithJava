@@ -5,7 +5,8 @@ import java.util.Queue;
 import java.util.Stack;
 
 public class SimpleTree implements Tree {
-	private Node root;
+	
+    private Node root;
 
 	public Node getRoot() {
 		return root;
