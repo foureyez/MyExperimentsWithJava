@@ -3,41 +3,34 @@ package com.algorithm.graph;
 import java.util.LinkedList;
 
 public class Graph {
-    private LinkedList<Integer> adj[];
-    private boolean visited[];
-    private int V;
+	private final int V;
+	private int E;
+	private LinkedList<Integer>[] adj;
 
-    public Graph(int V) {
-        this.V = V;
-        adj = new LinkedList[V];
-        visited = new boolean[V];
+	public Graph(int V) {
+		this.V = V;
+		adj = (LinkedList<Integer>[]) new LinkedList[V];
 
-        for (int i = 0; i < V; i++) {
-            adj[i] = new LinkedList<>();
-        }
-    }
+		for (int i = 0; i < V; i++) {
+			adj[i] = new LinkedList<>();
+		}
+	}
 
-    public void addEdge(int a, int b) {
-        adj[a].add(b);
-    }
+	public void addEdge(int a, int b) {
+		adj[a].add(b);
+		adj[b].add(a);
+		E++;
+	}
 
-    public LinkedList<Integer>[] getAdj() {
-        return adj;
-    }
+	public LinkedList<Integer> adj(int v) {
+		return adj[v];
+	}
 
-    public int getV() {
-        return V;
-    }
+	public int V() {
+		return V;
+	}
 
-    public boolean[] isVisited() {
-        return visited;
-    }
-
-    public void setVisited(int i, boolean status) {
-        visited[i] = status;
-    }
-    
-    public void resetVisited() {
-        visited = new boolean[V];
-    }
+	public int E() {
+		return E;
+	}
 }

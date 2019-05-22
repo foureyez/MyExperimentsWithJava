@@ -29,15 +29,15 @@ class EdgeExistence {
 		v = Integer.parseInt(lineArr[0]);
 		e = Integer.parseInt(lineArr[1]);
 
-		int adj[][] = new int[v+1][v+1];
+		int adj[][] = new int[v + 1][v + 1];
 
-		try{
+		try {
 			for (int i = 0; i < e; i++) {
 				lineArr = br.readLine().split(" ");
 				adj[Integer.parseInt(lineArr[0])][Integer.parseInt(lineArr[1])] = 1;
 				adj[Integer.parseInt(lineArr[1])][Integer.parseInt(lineArr[0])] = 1;
 			}
-		}catch(Exception ex){
+		} catch (Exception ex) {
 			ex.printStackTrace();
 		}
 
@@ -49,13 +49,13 @@ class EdgeExistence {
 			a = Integer.parseInt(lineArr[0]);
 			b = Integer.parseInt(lineArr[1]);
 
-			if(adj[a][b] == 1 || adj[b][a] == 1){
+			if (adj[a][b] == 1 || adj[b][a] == 1) {
 				result.append("YES\n");
-			}else{
+			} else {
 				result.append("NO\n");
 			}
 		}
-		
+
 		System.out.println(result);
 	}
 }

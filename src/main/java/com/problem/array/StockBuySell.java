@@ -7,15 +7,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * 
- * The cost of a stock on each day is given in an array, find the max profit
- * that you can make by buying and selling in those days.<br>
- * 
- * For example, if the given array is {100, 180, 260, 310, 40, 535, 695}, the
- * maximum profit can earned by buying on day 0, selling on day 3.<br>
- * 
- * Again buy on day 4 and sell on day 6. If the given array of prices is sorted
- * in decreasing order, then profit cannot be earned at all.
+ * Problem Statement
+ * https://practice.geeksforgeeks.org/problems/stock-buy-and-sell/0 <br/>
+ * Article : https://www.geeksforgeeks.org/stock-buy-sell/
  * 
  */
 public class StockBuySell {
@@ -23,8 +17,7 @@ public class StockBuySell {
 	public static void main(String[] args) throws IOException {
 		String input[];
 		int stockPrice[], n;
-		boolean lookForMinima = true;
-		List<Integer> buysell = new ArrayList<>();
+		StringBuilder ans = new StringBuilder();
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
 		input = br.readLine().split(" ");
@@ -35,24 +28,11 @@ public class StockBuySell {
 			stockPrice[i] = Integer.parseInt(input[i]);
 		}
 
-		for (int j = 1; j < n; j++) {
-			if (stockPrice[j - 1] < stockPrice[j] && lookForMinima) {
-				buysell.add(j - 1);
-				lookForMinima = false;
-			}
-
-			if (stockPrice[j - 1] > stockPrice[j]) {
-				buysell.add(j - 1);
-				lookForMinima = true;
-			}
-
-			if (j == n - 1) {
-				buysell.add(j);
-			}
+		for (int j = 1; j < n - 1; j++) {
 
 		}
 
-		System.out.println(buysell.toString());
+		System.out.println(ans.toString());
 
 	}
 
