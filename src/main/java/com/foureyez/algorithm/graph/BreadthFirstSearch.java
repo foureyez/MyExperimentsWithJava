@@ -1,35 +1,60 @@
 package com.foureyez.algorithm.graph;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
+import java.util.Queue;
+
+import com.foureyez.api.graph.Graph;
 
 public class BreadthFirstSearch {
-    private boolean[] isVisited;
+	private Graph<?> G;
 
-    public BreadthFirstSearch(int V) {
-        isVisited = new boolean[V];
-    }
+	public BreadthFirstSearch(Graph<?> graph) {
+		this.G = graph;
+	}
 
-    public int search(List<Integer>[] adj, int s) {
-        List<Integer> queue = new LinkedList<>();
-        queue.add(s);
+	/**
+	 * @param G      - Source Graph
+	 * @param source - Source node
+	 * @param target - Target node to find
+	 */
+	public List<Integer> perform(int source, int target) {
+		Map<Integer, Integer> cameFrom = new HashMap<Integer, Integer>();
 
-        while (!queue.isEmpty()) {
+		Queue<Integer> queue = new LinkedList<>();
+		queue.add(source);
 
-            int curr = queue.remove(0);
+		while (!queue.isEmpty()) {
+			int tmp = queue.remove();
+			G.setVisited(tmp, true);
 
-            if (isVisited[curr]) {
-                continue;
-            }
+			if (tmp == target) {
+				break;
+			}
 
-            isVisited[curr] = true;
+			for (int i : G.getNeighbours(tmp)) {
+				if (!G.isVisited(i)) {
+					cameFrom.put(i, tmp);
+					queue.add(i);
+				}
+			}
+		}
 
-            for (Integer a : adj[curr]) {
-                if (!isVisited[a]) {
-                    queue.add(a);
-                }
-            }
-        }
-        return 0;
-    }
+		return calculatePath(cameFrom, target);
+	}
+
+	private List<Integer> calculatePath(Map<Integer, Integer> cameFrom, int target) {
+		List<Integer> path = new ArrayList<Integer>();
+		path.add(target);
+
+		while (cameFrom.get(target) != null) {
+			path.add(cameFrom.get(target));
+			target = cameFrom.get(target);
+		}
+
+		return path;
+	}
 }

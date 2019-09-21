@@ -9,15 +9,11 @@ public class ThreeVariableSorting {
     public static void main(String args[]) {
         int[] a = new int[] {0, 2, 1, 1, 0, 2, 1, 2, 0};
 
-        threeElementSortTwo(a);
+        threeElementSort(a);
 
         for (int i = 0; i < a.length; i++) {
             System.out.print(a[i] + ", ");
         }
-    }
-
-    private static void threeElementSortOne(int[] a) {
-
     }
 
     /**
@@ -40,7 +36,7 @@ public class ThreeVariableSorting {
      * 1: Mid++
      * 2: swap a[Mid] and a[Hi]; Hi--
      */
-    private static void threeElementSortTwo(int[] a) {
+    private static void threeElementSort(int[] a) {
         int low = 0, mid = 0, high = a.length - 1;
 
         while (mid <= high) {

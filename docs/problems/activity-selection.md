@@ -30,5 +30,5 @@ This activity will not be executed.
 
 Lastly, the activity (20,30) will be picked.  
 
-[Source Code](https://github.com/foureyez/MyExperimentsWithJava/blob/master/src/main/java/com/problem/array/ActivitySelection.java) 
+[Source Code](https://github.com/foureyez/MyExperimentsWithJava/blob/master/src/main/java/com/foureyez/problem/array/ActivitySelection.java) 
 [Go Back](https://foureyez.github.io/MyExperimentsWithJava/overview)

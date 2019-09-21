@@ -11,4 +11,4 @@ This is an example diagram for merge sort execution sequence taken from [GeeksFo
 
 As you can guess, the main logic of merge sort is in the merge() method.
 
-[Source Code](https://github.com/foureyez/MyExperimentsWithJava/blob/master/src/main/java/com/algorithm/sort/MergeSort.java)
+[Source Code](https://github.com/foureyez/MyExperimentsWithJava/blob/master/src/main/java/com/foureyez/algorithm/sort/MergeSort.java)
